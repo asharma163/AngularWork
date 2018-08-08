@@ -10,7 +10,7 @@ export class ServerComponent implements OnInit {
   serverStatus: string = "offline";
   isDisabled = false;
   serverCreationStatus = "There is no server!";
-
+  serverName = "Test";
   constructor() {
     setTimeout(() => {
       this.isDisabled = true;
@@ -18,7 +18,11 @@ export class ServerComponent implements OnInit {
   }
 
   onCreateServer() {
-    this.serverCreationStatus = "Server created!";
+    this.serverCreationStatus = "Server created! with name " + this.serverName;
+  }
+
+  onUpdateServerName(event: any) {
+    this.serverName = event.target.value;
   }
 
   ngOnInit() {}
