@@ -8,9 +8,13 @@ import { Component, OnInit } from "@angular/core";
 export class ServerComponent implements OnInit {
   serverId: number = 10;
   serverStatus: string = "offline";
+  isDisabled = false;
 
-
-  constructor() {}
+  constructor() {
+    setTimeout(() => {
+      this.isDisabled = true;
+    }, 2000);
+  }
 
   ngOnInit() {}
 }
