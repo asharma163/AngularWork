@@ -1,4 +1,6 @@
-1.  CREATE TWO NEW COMPONENTS - WARNINGALERT AND SUCCESSALERT
-2.  OUTPUT THEM BENEATH EACH OTHER IN THE APPCOMPONENT
-3.  OUTPUT SUCCESS OR WARNING MESSAGES
-4.  STYLE THE COMPONENTS ACCORDINGLY.
+Databinding is communication between business logic and UI.
+
+String Interpolation -> synatx {{something}}
+Property Binding [property] = "data"
+Event Binding (event) = "expression"
+Two way databinding [(ngModel)] = "something"
