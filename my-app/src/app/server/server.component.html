@@ -1,3 +1,6 @@
 <hr>
-<button [disabled]="!isDisabled" class="btn btn-primary">Add Server</button>
-<div>Server with ID {{serverId}} is {{serverStatus}}</div>
+<button [disabled]="!isDisabled" class="btn btn-primary" (click)="onCreateServer()">Add Server</button>
+<div>
+    Server with ID {{serverId}} is {{serverStatus}}
+    <p>{{serverCreationStatus}}</p>
+</div>
