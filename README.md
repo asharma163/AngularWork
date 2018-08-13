@@ -1,3 +1,3 @@
-Directives are instructions in DOM.
+Attribute directives.
 
-ngIf to output data conditionally.
+ngClass

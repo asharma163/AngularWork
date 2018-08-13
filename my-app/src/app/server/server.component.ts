@@ -5,27 +5,19 @@ import { Component, OnInit } from "@angular/core";
   templateUrl: "./server.component.html",
   styleUrls: ["./server.component.css"]
 })
-export class ServerComponent implements OnInit {
+export class ServerComponent {
   serverId: number = 10;
   serverStatus: string = "offline";
-  isDisabled = false;
-  serverCreationStatus = "There is no server!";
-  serverName = "Test";
-  serverCreated = false;
+
   constructor() {
-    setTimeout(() => {
-      this.isDisabled = true;
-    }, 2000);
+    this.serverStatus = Math.random() > 0.5 ? "online" : "offline";
   }
 
-  onCreateServer() {
-    this.serverCreated = true;
-    this.serverCreationStatus = "Server created! with name " + this.serverName;
+  getServerStatus() {
+    return this.serverStatus;
   }
 
-  onUpdateServerName(event: any) {
-    this.serverName = event.target.value;
+  getColor() {
+    return this.serverStatus === "online" ? "green" : "red";
   }
-
-  ngOnInit() {}
 }
